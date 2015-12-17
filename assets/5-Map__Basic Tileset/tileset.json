@@ -1,0 +1,15 @@
+{
+  "formatVersion": 1,
+  "grid": {
+    "width": 16,
+    "height": 16
+  },
+  "tileProperties": {
+    "6_7": {
+      "action": "menuQuest"
+    },
+    "5_7": {
+      "action": "menuItem"
+    }
+  }
+}

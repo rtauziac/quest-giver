@@ -1,0 +1,53 @@
+{
+  "behaviors": {
+    "PlayerBehavior": {
+      "scriptId": "7",
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "moveSpeed",
+          "type": "number"
+        },
+        {
+          "name": "movable",
+          "type": "boolean"
+        },
+        {
+          "name": "controllable",
+          "type": "boolean"
+        },
+        {
+          "name": "lastKeyDown",
+          "type": "string"
+        }
+      ]
+    },
+    "MenuSellItemsBehavior": {
+      "scriptId": "10",
+      "parentBehavior": null,
+      "properties": []
+    },
+    "MenuGiveQuestBehavior": {
+      "scriptId": "11",
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "selection",
+          "type": "number"
+        },
+        {
+          "name": "menuOffset",
+          "type": "number"
+        },
+        {
+          "name": "entriesVisibleLenght",
+          "type": "number"
+        },
+        {
+          "name": "entriesSpacing",
+          "type": "number"
+        }
+      ]
+    }
+  }
+}

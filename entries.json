@@ -1,0 +1,93 @@
+[
+  {
+    "id": "1",
+    "name": "Characters",
+    "type": null,
+    "children": [
+      {
+        "id": "0",
+        "name": "Character1",
+        "type": "sprite"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Map",
+    "type": null,
+    "children": [
+      {
+        "id": "5",
+        "name": "Basic Tileset",
+        "type": "tileSet"
+      },
+      {
+        "id": "4",
+        "name": "Main Map",
+        "type": "tileMap"
+      },
+      {
+        "id": "9",
+        "name": "Background Map",
+        "type": "tileMap"
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "name": "Behaviors",
+    "type": null,
+    "children": [
+      {
+        "id": "7",
+        "name": "Player",
+        "type": "script"
+      },
+      {
+        "id": "10",
+        "name": "MenuSellItems",
+        "type": "script"
+      },
+      {
+        "id": "11",
+        "name": "MenuGiveQuest",
+        "type": "script"
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "name": "Font",
+    "type": "font"
+  },
+  {
+    "id": "8",
+    "name": "Forge Scene",
+    "type": "scene"
+  },
+  {
+    "id": "13",
+    "name": "Medieval font",
+    "type": "font"
+  },
+  {
+    "id": "14",
+    "name": "Selection",
+    "type": "sound"
+  },
+  {
+    "id": "15",
+    "name": "Selection2",
+    "type": "sound"
+  },
+  {
+    "id": "16",
+    "name": "Blip",
+    "type": "sound"
+  },
+  {
+    "id": "17",
+    "name": "Back",
+    "type": "sound"
+  }
+]
