@@ -2,69 +2,179 @@
   "formatVersion": 1,
   "nodes": [
     {
-      "id": "1",
-      "name": "Player",
+      "id": "2",
+      "name": "Map",
       "children": [
         {
-          "id": "0",
-          "name": "Camera",
+          "id": "11",
+          "name": "Floor",
           "children": [
             {
-              "id": "3",
-              "name": "Background",
-              "children": [],
+              "id": "1",
+              "name": "Player",
+              "children": [
+                {
+                  "id": "0",
+                  "name": "Camera",
+                  "children": [
+                    {
+                      "id": "3",
+                      "name": "Background",
+                      "children": [],
+                      "components": [
+                        {
+                          "type": "TileMapRenderer",
+                          "config": {
+                            "tileMapAssetId": "9",
+                            "tileSetAssetId": null,
+                            "castShadow": false,
+                            "receiveShadow": false,
+                            "materialType": "basic",
+                            "shaderAssetId": null
+                          },
+                          "id": "0"
+                        }
+                      ],
+                      "position": {
+                        "x": -3,
+                        "y": -3,
+                        "z": -19
+                      },
+                      "orientation": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0,
+                        "w": 1
+                      },
+                      "scale": {
+                        "x": 1,
+                        "y": 1,
+                        "z": 1
+                      },
+                      "visible": true,
+                      "layer": 0,
+                      "prefab": null
+                    }
+                  ],
+                  "components": [
+                    {
+                      "type": "Camera",
+                      "config": {
+                        "mode": "orthographic",
+                        "fov": 60,
+                        "orthographicScale": 8,
+                        "viewport": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 1,
+                          "height": 1
+                        },
+                        "depth": 0,
+                        "nearClippingPlane": 0.1,
+                        "farClippingPlane": 20
+                      },
+                      "id": "0"
+                    }
+                  ],
+                  "position": {
+                    "x": 0,
+                    "y": 0.05,
+                    "z": 5
+                  },
+                  "orientation": {
+                    "x": -0.008726535498373935,
+                    "y": 0,
+                    "z": 0,
+                    "w": 0.9999619230641713
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "visible": true,
+                  "layer": 0,
+                  "prefab": null
+                }
+              ],
               "components": [
                 {
-                  "type": "TileMapRenderer",
+                  "type": "SpriteRenderer",
                   "config": {
-                    "tileMapAssetId": "9",
-                    "tileSetAssetId": null,
-                    "castShadow": false,
+                    "spriteAssetId": "0",
+                    "animationId": "",
+                    "horizontalFlip": false,
+                    "verticalFlip": false,
+                    "castShadow": true,
                     "receiveShadow": false,
+                    "color": "ffffff",
+                    "overrideOpacity": false,
+                    "opacity": null,
                     "materialType": "basic",
                     "shaderAssetId": null
                   },
                   "id": "0"
+                },
+                {
+                  "type": "ArcadeBody2D",
+                  "config": {
+                    "type": "box",
+                    "movable": true,
+                    "width": 0.876,
+                    "height": 0.3,
+                    "offset": {
+                      "x": 0,
+                      "y": -0.15
+                    },
+                    "tileMapAssetId": null,
+                    "tileSetPropertyName": null,
+                    "layersIndex": null
+                  },
+                  "id": "1"
+                },
+                {
+                  "type": "Behavior",
+                  "config": {
+                    "behaviorName": "PlayerBehavior",
+                    "propertyValues": {
+                      "moveSpeed": {
+                        "type": "number",
+                        "value": 0.06
+                      }
+                    }
+                  },
+                  "id": "3"
                 }
               ],
               "position": {
-                "x": -3,
-                "y": -3,
-                "z": -99
+                "x": 12,
+                "y": 7,
+                "z": 0
               },
               "orientation": {
-                "x": 0,
+                "x": 0.00872653512987063,
                 "y": 0,
                 "z": 0,
-                "w": 1
+                "w": 0.9999619268083657
               },
               "scale": {
                 "x": 1,
-                "y": 1,
-                "z": 1
+                "y": 1.000000014962205,
+                "z": 1.000000014962205
               },
               "visible": true,
               "layer": 0,
               "prefab": null
             },
             {
-              "id": "4",
-              "name": "MenuQuest",
+              "id": "12",
+              "name": "AdventurerManager",
               "children": [],
-              "components": [
-                {
-                  "type": "Behavior",
-                  "config": {
-                    "behaviorName": "MenuGiveQuestBehavior",
-                    "propertyValues": {}
-                  },
-                  "id": "0"
-                }
-              ],
+              "components": [],
               "position": {
-                "x": 0.8099536895751953,
-                "y": 2.746394157409668,
-                "z": -1
+                "x": 0,
+                "y": 0,
+                "z": 0
               },
               "orientation": {
                 "x": 0,
@@ -82,30 +192,11 @@
               "prefab": null
             }
           ],
-          "components": [
-            {
-              "type": "Camera",
-              "config": {
-                "mode": "orthographic",
-                "fov": 60,
-                "orthographicScale": 6,
-                "viewport": {
-                  "x": 0,
-                  "y": 0,
-                  "width": 1,
-                  "height": 1
-                },
-                "depth": 0,
-                "nearClippingPlane": 0.1,
-                "farClippingPlane": 100
-              },
-              "id": "0"
-            }
-          ],
+          "components": [],
           "position": {
             "x": 0,
             "y": 0,
-            "z": 5
+            "z": 1
           },
           "orientation": {
             "x": 0,
@@ -125,85 +216,12 @@
       ],
       "components": [
         {
-          "type": "SpriteRenderer",
-          "config": {
-            "spriteAssetId": "0",
-            "animationId": "",
-            "horizontalFlip": false,
-            "verticalFlip": false,
-            "castShadow": false,
-            "receiveShadow": false,
-            "color": "ffffff",
-            "overrideOpacity": false,
-            "opacity": null,
-            "materialType": "basic",
-            "shaderAssetId": null
-          },
-          "id": "0"
-        },
-        {
-          "type": "ArcadeBody2D",
-          "config": {
-            "type": "box",
-            "movable": true,
-            "width": 0.876,
-            "height": 0.876,
-            "offset": {
-              "x": 0,
-              "y": 0
-            },
-            "tileMapAssetId": null,
-            "tileSetPropertyName": null,
-            "layersIndex": null
-          },
-          "id": "1"
-        },
-        {
-          "type": "Behavior",
-          "config": {
-            "behaviorName": "PlayerBehavior",
-            "propertyValues": {
-              "moveSpeed": {
-                "type": "number",
-                "value": 0.06
-              }
-            }
-          },
-          "id": "3"
-        }
-      ],
-      "position": {
-        "x": 6,
-        "y": 6,
-        "z": 0.025
-      },
-      "orientation": {
-        "x": 0,
-        "y": 0,
-        "z": 0,
-        "w": 1
-      },
-      "scale": {
-        "x": 1,
-        "y": 1,
-        "z": 1
-      },
-      "visible": true,
-      "layer": 0,
-      "prefab": null
-    },
-    {
-      "id": "2",
-      "name": "Map",
-      "children": [],
-      "components": [
-        {
           "type": "TileMapRenderer",
           "config": {
             "tileMapAssetId": "4",
             "tileSetAssetId": null,
-            "castShadow": false,
-            "receiveShadow": false,
+            "castShadow": true,
+            "receiveShadow": true,
             "materialType": "basic",
             "shaderAssetId": null
           },
@@ -231,6 +249,318 @@
         "x": 0,
         "y": 0,
         "z": 0
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    },
+    {
+      "id": "13",
+      "name": "HUD camera",
+      "children": [
+        {
+          "id": "4",
+          "name": "MenuQuest",
+          "children": [
+            {
+              "id": "9",
+              "name": "Count selector",
+              "children": [
+                {
+                  "id": "10",
+                  "name": "Text",
+                  "children": [],
+                  "components": [
+                    {
+                      "type": "TextRenderer",
+                      "config": {
+                        "fontAssetId": "13",
+                        "text": "10",
+                        "alignment": "center",
+                        "size": null,
+                        "color": null,
+                        "verticalAlignment": "center"
+                      },
+                      "id": "0"
+                    }
+                  ],
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0.1
+                  },
+                  "orientation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "visible": true,
+                  "layer": 0,
+                  "prefab": null
+                }
+              ],
+              "components": [
+                {
+                  "type": "SpriteRenderer",
+                  "config": {
+                    "spriteAssetId": "24",
+                    "animationId": null,
+                    "horizontalFlip": false,
+                    "verticalFlip": false,
+                    "castShadow": false,
+                    "receiveShadow": false,
+                    "color": "ffffff",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "basic",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0.9070558547973633,
+                "y": -2.3321075439453125,
+                "z": 0.09999990463256836
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "Behavior",
+              "config": {
+                "behaviorName": "MenuGiveQuestBehavior",
+                "propertyValues": {}
+              },
+              "id": "0"
+            },
+            {
+              "type": "SpriteRenderer",
+              "config": {
+                "spriteAssetId": "23",
+                "animationId": null,
+                "horizontalFlip": false,
+                "verticalFlip": false,
+                "castShadow": false,
+                "receiveShadow": false,
+                "color": "ffffff",
+                "overrideOpacity": false,
+                "opacity": null,
+                "materialType": "basic",
+                "shaderAssetId": null
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": 0.795,
+            "y": 2.52,
+            "z": -1.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "5",
+          "name": "Chat box",
+          "children": [
+            {
+              "id": "6",
+              "name": "Face",
+              "children": [],
+              "components": [
+                {
+                  "type": "SpriteRenderer",
+                  "config": {
+                    "spriteAssetId": "0",
+                    "animationId": "1",
+                    "horizontalFlip": false,
+                    "verticalFlip": false,
+                    "castShadow": false,
+                    "receiveShadow": false,
+                    "color": "ffffff",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "basic",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": -2,
+                "y": 0,
+                "z": 0.1
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            },
+            {
+              "id": "7",
+              "name": "Dialog",
+              "children": [],
+              "components": [
+                {
+                  "type": "TextRenderer",
+                  "config": {
+                    "fontAssetId": "13",
+                    "text": "Shut up!",
+                    "alignment": "left",
+                    "size": null,
+                    "color": null,
+                    "verticalAlignment": "top"
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": -1.177999496459961,
+                "y": 0.5883188247680664,
+                "z": 0.1100001335144043
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "SpriteRenderer",
+              "config": {
+                "spriteAssetId": "19",
+                "animationId": null,
+                "horizontalFlip": false,
+                "verticalFlip": false,
+                "castShadow": false,
+                "receiveShadow": false,
+                "color": "ffffff",
+                "overrideOpacity": false,
+                "opacity": null,
+                "materialType": "basic",
+                "shaderAssetId": null
+              },
+              "id": "0"
+            },
+            {
+              "type": "Behavior",
+              "config": {
+                "behaviorName": "ChatBoxBehavior",
+                "propertyValues": {}
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": 0,
+            "y": -2,
+            "z": -1
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        }
+      ],
+      "components": [
+        {
+          "type": "Camera",
+          "config": {
+            "mode": "orthographic",
+            "fov": 45,
+            "orthographicScale": 6,
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "depth": 0,
+            "nearClippingPlane": 0.1,
+            "farClippingPlane": 2
+          },
+          "id": "0"
+        }
+      ],
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 20
       },
       "orientation": {
         "x": 0,

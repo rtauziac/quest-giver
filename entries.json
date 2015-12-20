@@ -12,6 +12,28 @@
     ]
   },
   {
+    "id": "18",
+    "name": "HUD",
+    "type": null,
+    "children": [
+      {
+        "id": "19",
+        "name": "Chat box",
+        "type": "sprite"
+      },
+      {
+        "id": "23",
+        "name": "Item List BG",
+        "type": "sprite"
+      },
+      {
+        "id": "24",
+        "name": "Count view",
+        "type": "sprite"
+      }
+    ]
+  },
+  {
     "id": "3",
     "name": "Map",
     "type": null,
@@ -44,6 +66,16 @@
         "type": "script"
       },
       {
+        "id": "28",
+        "name": "Adventurer",
+        "type": "script"
+      },
+      {
+        "id": "21",
+        "name": "Dialogs",
+        "type": "script"
+      },
+      {
         "id": "10",
         "name": "MenuSellItems",
         "type": "script"
@@ -51,6 +83,11 @@
       {
         "id": "11",
         "name": "MenuGiveQuest",
+        "type": "script"
+      },
+      {
+        "id": "20",
+        "name": "ChatBox",
         "type": "script"
       }
     ]
@@ -72,12 +109,17 @@
   },
   {
     "id": "14",
-    "name": "Selection",
+    "name": "Speach",
     "type": "sound"
   },
   {
     "id": "15",
     "name": "Selection2",
+    "type": "sound"
+  },
+  {
+    "id": "22",
+    "name": "Selection3",
     "type": "sound"
   },
   {
@@ -88,6 +130,16 @@
   {
     "id": "17",
     "name": "Back",
+    "type": "sound"
+  },
+  {
+    "id": "26",
+    "name": "Validate",
+    "type": "sound"
+  },
+  {
+    "id": "27",
+    "name": "Validate2",
     "type": "sound"
   }
 ]

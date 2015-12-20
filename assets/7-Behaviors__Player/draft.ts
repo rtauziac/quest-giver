@@ -5,6 +5,7 @@ class PlayerBehavior extends Sup.Behavior {
     lastKeyDown: string;
 
     awake() {
+        
     }
 
     update() {

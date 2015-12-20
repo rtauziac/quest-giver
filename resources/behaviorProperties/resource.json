@@ -48,6 +48,25 @@
           "type": "number"
         }
       ]
+    },
+    "ChatBoxBehavior": {
+      "scriptId": "20",
+      "parentBehavior": null,
+      "properties": []
+    },
+    "AdventurerBehavior": {
+      "scriptId": "28",
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "waypoint",
+          "type": "Sup.Math.Vector3"
+        },
+        {
+          "name": "speed",
+          "type": "number"
+        }
+      ]
     }
   }
 }
