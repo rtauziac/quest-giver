@@ -63,6 +63,7 @@ class MenuGiveQuestBehavior extends Sup.Behavior {
                     Sup.Audio.playSound("Speach");
                     let textWithValues = DialogTexts.player_give_quest.replace("{0}", value.toString()).replace("{1}", this.items[this.selection]);
                     Sup.getActor("Chat box").getBehavior(ChatBoxBehavior).showDialog([{text:textWithValues, name:"Player", sprite:"Characters/Character1", action: function() {
+                        Adventurer.currentAdventurer.giveQuest();
                         Sup.getActor("Player").getBehavior(PlayerBehavior).giveControlBack();
                     }}]);
                 }

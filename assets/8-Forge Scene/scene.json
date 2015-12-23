@@ -169,11 +169,97 @@
             {
               "id": "12",
               "name": "AdventurerManager",
-              "children": [],
+              "children": [
+                {
+                  "id": "15",
+                  "name": "Adventurer1",
+                  "children": [],
+                  "components": [
+                    {
+                      "type": "Behavior",
+                      "config": {
+                        "behaviorName": "AdventurerBehavior",
+                        "propertyValues": {
+                          "sprite": {
+                            "type": "string",
+                            "value": "Characters/Character1"
+                          },
+                          "speed": {
+                            "type": "number",
+                            "value": 0.04
+                          }
+                        }
+                      },
+                      "id": "0"
+                    },
+                    {
+                      "type": "SpriteRenderer",
+                      "config": {
+                        "spriteAssetId": null,
+                        "animationId": null,
+                        "horizontalFlip": false,
+                        "verticalFlip": false,
+                        "castShadow": false,
+                        "receiveShadow": false,
+                        "color": "ffffff",
+                        "overrideOpacity": false,
+                        "opacity": null,
+                        "materialType": "basic",
+                        "shaderAssetId": null
+                      },
+                      "id": "1"
+                    }
+                  ],
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "orientation": {
+                    "x": 0.008726535498373935,
+                    "y": 0,
+                    "z": 0,
+                    "w": 0.9999619230641713
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "visible": true,
+                  "layer": 0,
+                  "prefab": null
+                }
+              ],
               "components": [],
               "position": {
                 "x": 0,
                 "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            },
+            {
+              "id": "14",
+              "name": "QuestPost",
+              "children": [],
+              "components": [],
+              "position": {
+                "x": 15.755990028381348,
+                "y": 7.8702778816223145,
                 "z": 0
               },
               "orientation": {

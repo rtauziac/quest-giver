@@ -5,6 +5,7 @@ class PlayerBehavior extends Sup.Behavior {
     lastKeyDown: string;
 
     awake() {
+        
     }
 
     update() {
@@ -51,12 +52,14 @@ class PlayerBehavior extends Sup.Behavior {
                 let mapRenderer = Sup.getActor("Map").tileMapRenderer;
                 let targetTile = mapRenderer.getTileMap().getTileAt(2, targetTilePos.x, targetTilePos.y);
                 if (mapRenderer.getTileSet().getTileProperties(targetTile)["action"] == "menuQuest") {
-                    Sup.Audio.playSound("Speach");
-                    Sup.getActor("Chat box").getBehavior(ChatBoxBehavior).showDialog([{text:DialogTexts.player_ask_quest, name:"Player", sprite:"Characters/Character1", action:function(){
-                        Sup.getActor("MenuQuest").getBehavior(MenuGiveQuestBehavior).setFocus(true);
-                        Sup.Audio.playSound("Selection3");
-                    }}]);
-                    this.controllable = false;
+                    if (Adventurer.currentAdventurer != null && Adventurer.currentAdventurer.state == AdventurerState.waitingForQuest) {
+                        Sup.Audio.playSound("Speach");
+                        Sup.getActor("Chat box").getBehavior(ChatBoxBehavior).showDialog([{text:DialogTexts.player_ask_quest, name:"Player", sprite:"Characters/Character1", action:function(){
+                            Sup.getActor("MenuQuest").getBehavior(MenuGiveQuestBehavior).setFocus(true);
+                            Sup.Audio.playSound("Selection3");
+                        }}]);
+                        this.controllable = false;
+                    }
                 }
             }
         }

@@ -65,6 +65,10 @@
         {
           "name": "speed",
           "type": "number"
+        },
+        {
+          "name": "sprite",
+          "type": "string"
         }
       ]
     }
