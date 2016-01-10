@@ -67,8 +67,46 @@
           "type": "number"
         },
         {
+          "name": "questSuccessful",
+          "type": "boolean"
+        },
+        {
+          "name": "item",
+          "type": "string"
+        },
+        {
+          "name": "itemCount",
+          "type": "number"
+        },
+        {
           "name": "sprite",
           "type": "string"
+        },
+        {
+          "name": "questTime",
+          "type": "number"
+        },
+        {
+          "name": "questDifficulty",
+          "type": "number"
+        }
+      ]
+    },
+    "AdventurerManagerBehavior": {
+      "scriptId": "29",
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "waitTime",
+          "type": "number"
+        },
+        {
+          "name": "currentWaitTimeTick",
+          "type": "number"
+        },
+        {
+          "name": "queueLength",
+          "type": "number"
         }
       ]
     }

@@ -29,6 +29,7 @@ class ChatBoxBehavior extends Sup.Behavior {
                     this.nextAction = null;
                 }
                 if (this.pendingDialogs != null && this.pendingDialogs.length > 0) {
+                    Sup.Audio.playSound("Speach");
                     this.showDialog_internal(this.pendingDialogs);
                 }
                 else {

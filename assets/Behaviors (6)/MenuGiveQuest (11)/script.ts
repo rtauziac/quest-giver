@@ -1,5 +1,5 @@
 class MenuGiveQuestBehavior extends Sup.Behavior {
-    items = [
+    public items = [
         "String",
         "Rope",
         "Leather",
@@ -61,9 +61,10 @@ class MenuGiveQuestBehavior extends Sup.Behavior {
                 if (Sup.Input.wasKeyJustPressed("X")) {
                     this.setFocus(false);
                     Sup.Audio.playSound("Speach");
-                    let textWithValues = DialogTexts.player_give_quest.replace("{0}", value.toString()).replace("{1}", this.items[this.selection]);
+                    let currentItem = this.items[this.selection];
+                    let textWithValues = DialogTexts.player_give_quest[Sup.Math.Random.integer(0, DialogTexts.player_give_quest.length - 1)].replace("{item}", value.toString()).replace("{itemCount}", this.items[this.selection]);
                     Sup.getActor("Chat box").getBehavior(ChatBoxBehavior).showDialog([{text:textWithValues, name:"Player", sprite:"Characters/Character1", action: function() {
-                        Adventurer.currentAdventurer.giveQuest();
+                        Adventurer.currentAdventurer.giveQuest(currentItem, value, 1 * 60, 0.5);
                         Sup.getActor("Player").getBehavior(PlayerBehavior).giveControlBack();
                     }}]);
                 }

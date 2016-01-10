@@ -52,13 +52,34 @@ class PlayerBehavior extends Sup.Behavior {
                 let mapRenderer = Sup.getActor("Map").tileMapRenderer;
                 let targetTile = mapRenderer.getTileMap().getTileAt(2, targetTilePos.x, targetTilePos.y);
                 if (mapRenderer.getTileSet().getTileProperties(targetTile)["action"] == "menuQuest") {
-                    if (Adventurer.currentAdventurer != null && Adventurer.currentAdventurer.state == AdventurerState.waitingForQuest) {
-                        Sup.Audio.playSound("Speach");
-                        Sup.getActor("Chat box").getBehavior(ChatBoxBehavior).showDialog([{text:DialogTexts.player_ask_quest, name:"Player", sprite:"Characters/Character1", action:function(){
-                            Sup.getActor("MenuQuest").getBehavior(MenuGiveQuestBehavior).setFocus(true);
-                            Sup.Audio.playSound("Selection3");
-                        }}]);
-                        this.controllable = false;
+                    if (Adventurer.currentAdventurer != null) {
+                        let currAdventurer = Adventurer.currentAdventurer;
+                        if (currAdventurer.state == AdventurerState.waitingForQuest) {
+                            Sup.getActor("Chat box").getBehavior(ChatBoxBehavior).showDialog([{text:DialogTexts.player_ask_quest[Sup.Math.Random.integer(0, DialogTexts.player_ask_quest.length - 1)], name:"Player", sprite:"Characters/Character1", action:function(){
+                                Sup.getActor("MenuQuest").getBehavior(MenuGiveQuestBehavior).setFocus(true);
+                                Sup.Audio.playSound("Selection3");
+                            }}]);
+                            this.controllable = false;
+                        }
+                        else if (currAdventurer.state == AdventurerState.backFromQuest) {
+                            if (currAdventurer.isQuestSuccessfull()) {
+                                let dialog1 = DialogTexts.player_quest_successful[Sup.Math.Random.integer(0, DialogTexts.player_quest_successful.length - 1)].replace("{item}", currAdventurer.getItem()).replace("{itemCount}", currAdventurer.getItemCount().toString());
+                                let dialog2 = DialogTexts.player_quest_reward[Sup.Math.Random.integer(0, DialogTexts.player_quest_reward.length - 1)];
+                                Sup.getActor("Chat box").getBehavior(ChatBoxBehavior).showDialog([{text: dialog1, name: "Player", sprite: "Characters/Character1"},
+                                                                                                  {text: dialog2, name: "Player", sprite: "Characters/Character1", action:function(){
+                                Sup.getActor("Player").getBehavior(PlayerBehavior).giveControlBack();
+                                currAdventurer.goAway();
+                            }}]);
+                            }
+                            else {
+                                let dialog = DialogTexts.player_quest_fail[Sup.Math.Random.integer(0, DialogTexts.player_quest_fail.length - 1)];
+                                Sup.getActor("Chat box").getBehavior(ChatBoxBehavior).showDialog([{text: dialog, name:"Player", sprite:"Characters/Character1", action:function(){
+                                Sup.getActor("Player").getBehavior(PlayerBehavior).giveControlBack();
+                                Adventurer.currentAdventurer.goAway();
+                            }}]);
+                            }
+                            this.controllable = false;
+                        }
                     }
                 }
             }

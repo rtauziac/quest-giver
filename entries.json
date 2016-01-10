@@ -66,11 +66,6 @@
         "type": "script"
       },
       {
-        "id": "28",
-        "name": "Adventurer",
-        "type": "script"
-      },
-      {
         "id": "21",
         "name": "Dialogs",
         "type": "script"
@@ -86,8 +81,18 @@
         "type": "script"
       },
       {
+        "id": "28",
+        "name": "Adventurer",
+        "type": "script"
+      },
+      {
         "id": "20",
         "name": "ChatBox",
+        "type": "script"
+      },
+      {
+        "id": "29",
+        "name": "AdventurerManager",
         "type": "script"
       }
     ]
@@ -98,14 +103,14 @@
     "type": "font"
   },
   {
-    "id": "8",
-    "name": "Forge Scene",
-    "type": "scene"
-  },
-  {
     "id": "13",
     "name": "Medieval font",
     "type": "font"
+  },
+  {
+    "id": "8",
+    "name": "Forge Scene",
+    "type": "scene"
   },
   {
     "id": "14",
